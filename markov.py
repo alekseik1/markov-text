@@ -37,7 +37,8 @@ def main(args):
 		db = Db(sqlite3.connect(name + '.db'), Sql())
 		generator = Generator(name, db, Rnd())
 		for i in range(0, count):
-			return generator.generate(WORD_SEPARATOR)
+			result = generator.generate(WORD_SEPARATOR)
+			print(result)
 
 	else:
 		raise ValueError(usage)
