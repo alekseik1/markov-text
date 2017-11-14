@@ -10,10 +10,6 @@ import codecs
 SENTENCE_SEPARATOR = '.'
 WORD_SEPARATOR = ' '
 
-if __name__ == '__main__':
-	args = sys.argv
-	main(args)
-
 def main(args):
 	usage = 'Usage: %s (parse <name> <depth> <path to txt file>|gen <name> <count>)' % (args[0], )
 
@@ -45,3 +41,8 @@ def main(args):
 
 	else:
 		raise ValueError(usage)
+
+
+if __name__ == '__main__':
+	args = sys.argv
+	main(args)
